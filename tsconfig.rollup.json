@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNEXT",
+        "module": "ESNEXT",
+        "noEmit": false,
+        "sourceMap": false,
+        "allowJs": true,
+        "checkJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "lib": ["es6"],
+        "moduleResolution": "node",
+        "noEmitOnError": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "pretty": true,
+        "strict": true,
+        "noImplicitAny": false
+    },
+    "include": ["src/**/*", "types/**/*"]
+}

@@ -1,10 +1,10 @@
 {
-    "name": "rollup-plugin-ts",
+    "name": "@alphabetabc/rollup-plugin-ts",
     "version": "0.0.1",
     "publishConfig": {
         "access": "public"
     },
-    "description": "fork:@rollup/plugin-typescript,patch type checker",
+    "description": "from:@rollup/plugin-typescript ,add  type checker",
     "license": "MIT",
     "repository": {
         "url": "rollup/plugins",
