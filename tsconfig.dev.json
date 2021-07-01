@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "./src-js",
+        "target": "ESNEXT",
+        "module": "ESNEXT",
+        "noEmit": false,
+        "sourceMap": false,
+        "noEmitOnError": true,
+        "allowJs": true,
+        "checkJs": true
+    },
+    "include": ["test-plugin"],
+    "exclude": ["src/**/*"]
+}

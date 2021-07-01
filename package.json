@@ -1,0 +1,62 @@
+{
+    "name": "rollup-plugin-ts",
+    "version": "0.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "fork:@rollup/plugin-typescript,patch type checker",
+    "license": "MIT",
+    "repository": {
+        "url": "rollup/plugins",
+        "directory": "packages/typescript"
+    },
+    "author": "alphabetabc",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "scripts": {
+        "dev": "rollup -c ./rollup.config.dev.js",
+        "build": "rollup -c ",
+        "ci:coverage": "nyc pnpm run test && nyc report --reporter=text-lcov > coverage.lcov",
+        "ci:lint": "pnpm run build && pnpm run lint",
+        "ci:lint:commits": "commitlint --from=${CIRCLE_BRANCH} --to=${CIRCLE_SHA1}",
+        "ci:test": "pnpm run test -- --verbose --serial",
+        "test": "ava",
+        "test:ts": "tsc --noEmit"
+    },
+    "files": [
+        "dist",
+        "types",
+        "README.md",
+        "LICENSE"
+    ],
+    "keywords": [
+        "rollup",
+        "plugin",
+        "typescript",
+        "es2015"
+    ],
+    "peerDependencies": {
+        "rollup": "^2.14.0",
+        "tslib": "*",
+        "typescript": ">=3.7.0"
+    },
+    "dependencies": {
+        "@rollup/pluginutils": "^3.1.0",
+        "resolve": "^1.17.0",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.5"
+    },
+    "devDependencies": {
+        "@rollup/plugin-buble": "^0.21.3",
+        "@rollup/plugin-commonjs": "^11.1.0",
+        "@rollup/plugin-typescript": "^5.0.2",
+        "@types/node": "^10.0.0",
+        "@types/resolve": "^1.20.0",
+        "buble": "^0.20.0",
+        "rollup": "^2.14.0"
+    },
+    "types": "types/index.d.ts"
+}
