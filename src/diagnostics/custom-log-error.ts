@@ -7,9 +7,9 @@ class LogError {
 
     private errorMap = new Map();
     private context: PluginContext;
-    private enableRollupErrorFlag: boolean = true;
+    private enableRollupErrorFlag: boolean | undefined = true;
 
-    enableRollupError(v: boolean) {
+    enableRollupError(v: boolean | undefined) {
         this.enableRollupErrorFlag = v;
     }
 

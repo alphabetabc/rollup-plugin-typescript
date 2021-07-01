@@ -51,6 +51,8 @@ export default function typescript(options: RollupTypescriptOptions = {}): Plugi
             }
             if (!program) {
                 logError = new CustomLogError(this);
+                // @ts-ignore
+                logError.enableRollupError(process?.env?.ROLLUP_WATCH === true);
                 program = createWatchProgram(
                     ts,
                     this,
@@ -76,9 +78,7 @@ export default function typescript(options: RollupTypescriptOptions = {}): Plugi
 
         watchChange(id) {
             if (!filter(id)) return;
-
             watchProgramHelper.watch();
-            logError.enableRollupError(true);
         },
 
         buildEnd() {
